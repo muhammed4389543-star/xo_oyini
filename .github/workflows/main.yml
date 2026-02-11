@@ -24,12 +24,12 @@ jobs:
           pip install pygbag
 
       - name: Build Web Assembly
-        run: pygbag --build --app_name "X&O Game" main.py
+        run: pygbag --build --app_name "X&O Game" game
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build/web'
+          path: 'game/build/web'
 
   deploy:
     needs: build
